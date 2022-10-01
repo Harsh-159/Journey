@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mine
+{% endblock %}
+
+{% block main %}
+<h1>Hello <div class="highlights">{{username}}</div></h1>
+<hr>
+{%if happened%}
+    <h3>In the past the following journeys have been made</h3>
+    {%for i in all_past%}
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">A journey to <div class="highlights">{{i[0]['location']}}</div> for {{i[0]['days']}} days starting on <div class="highlights">{{i[0]['start_date']}}</div> with estimated cost of {{i[0]['est_cost']}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{i[0]['joined']}} people joined with the minimum requirement being {{i[0]['min_people']}}</h6>
+              <p class="card-text">Description: {{i[0]['description']}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">A journey to <div class="highlights">{{i[1]['location']}}</div> for {{i[1]['days']}} days starting on <div class="highlights">{{i[1]['start_date']}}</div> with estimated cost of {{i[1]['est_cost']}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{i[1]['joined']}} people joined with the minimum requirement being {{i[1]['min_people']}}</h6>
+              <p class="card-text">Description: {{i[1]['description']}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {%endfor%}
+
+    {%if last%}
+    <p></p>
+      <div class="card">
+
+
+        <div class="card-body">
+          <h5 class="card-title">A journey to <div class="highlights">{{last['location']}}</div> for {{last['days']}} days starting on <div class="highlights">{{last['start_date']}}</div> with estimated cost of {{last['est_cost']}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{last['joined']}} people joined with the minimum requirement being {{last['min_people']}}</h6>
+          <p class="card-text">Description: {{last['description']}}</p>
+        </div>
+      </div>
+    {%endif%}
+    <!-- <table class="table table-striped table-dark">
+        <tbody>
+        {%for i in all_past%}
+          <tr>
+            <td><h4>A journey to {{i['location']}} for {{i['days']}} days starting on {{i['start_date']}} with estimated cost of {{i['est_cost']}}</h4></td>
+            <td><h4>{{i['joined']}} people joined with the minimum requirement beind {{i['min_people']}}</h4></td>
+            <td><h4>Description: {{i['description']}}</h4></td>
+          </tr>
+        {%endfor%}
+      </table> -->
+{%else%}
+    <h3>No past journey to show YET!!</h3>
+{%endif%}
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<hr>
+<div class="sidewize">
+    <img src="static/home.jpeg" alt="Journey Image" id="long_road_looking">
+    <h3>Hello <div class="highlights">{{user}},</div> welcome to journey. We hope you enjoy many many amazing journeys.</h3>
+</div>
+<hr>
+<h4 class="heading">Our vision</h4>
+<div class="sidewize">
+<p>In our college, most of us go on journeys only with a select group of friends. This leads to journeys being heavily dependent on everyone's schedule
+    to the point that due to the unavailability of even one person many journeys get canceled before they even start. Also, this
+    culture stops us from making new friends. We hope to resolve both these issues so that you can meet new incredible
+    people and go to awesome places.
+</p>
+<img src="static/Vision.jpg" alt="vision">
+</div>
+<hr>
+<h4 class="heading">How to use</h4>
+<div class="sidewize">
+<img src="static/how.jpg">
+
+<ul class="a">
+    <li>Access all avaiable journeys awaiting you using <div class="highlights">Join J</div></li>
+    <li>To create your own journey that others can join, use <div class="highlights">Create J</div></li>
+    <li>To check all the journeys you are a part of and the ones you have made, use <div class="highlights">My J</div></li>
+    <li>To see all past journeys, use <div class="highlights">Past J</div></li>
+    <li>Joing an entry is only allowed till 5 days before its start.</li>
+  </ul>
+</div>
+<hr>
+<!-- <h4 class="heading">Rules and guidelines</h4>
+<ul class="list-group">
+    <li class="list-group-item list-group-item-dark">Do not register using someone else roll no. If anyone is found doing such strict action will be taken</li>
+    <li class="list-group-item list-group-item-dark">If you decide to cancel a journey do it before 5 days from the start of the trip. A voilation will lead to monetary penalty</li>
+    <li class="list-group-item list-group-item-dark">Do not spam journeys or create and join feature</li>
+    <li class="list-group-item list-group-item-dark">No hurful words will be tolated in trip description and experience sharing</li>
+</ul> -->
+<!-- <hr> -->
+<h5 ><a href = "mailto:harshyadavhappy@gmail.com?subject = Feedback&body = Message">
+    Email us your feedback
+    </a></h5>
+
+<hr>
+{% endblock %}

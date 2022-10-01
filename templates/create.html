@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block main %}
+    <form action="/create" method="post" id="crt_form">
+        <div class="mb-3">
+            How many days long do you expect the journey to be?
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="days" name="days" placeholder="" type="number">
+        </div>
+        <div class="mb-3">
+            On which day will the journey start?
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="day" name="day" placeholder="" type="date">
+        </div>
+        <div class="mb-3">
+            What is the estimatied cost of  journey per head?
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="cost" name="cost" placeholder="" type="number">
+        </div>
+        <div class="mb-3">
+            What is the destination of your journey?
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="location" name="location" placeholder="" type="text">
+        </div>
+        <div class="mb-3">
+            Minimum number of people you want for the journey?
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="people" name="people" placeholder="" type="number">
+        </div>
+        <div class="mb-3">
+            Describe about the journey so get others a better idea of what's its about.
+            <textarea autocomplete="off" autofocus class="form-control mx-auto w-auto" id="description" name="description" form="crt_form" rows="4" cols="75" wrap="soft"   ></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Create Journey</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,124 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  th, td {
+    background-color: #96D4D4;
+  }
+
+  table{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  body {
+    background-color: black;
+    color: white;
+  }
+
+  .logo-image{
+    width: 200px;
+    height: 50px;
+}
+
+.heading{
+    text-shadow: 2px 2px grey;
+    text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+h3{
+  font-family:courier new;
+  font-weight:bold;
+  color:#c4c4c4;
+}
+
+p{
+  text-align:justify;
+}
+
+#long_road_looking{
+  filter: brightness(.7) contrast(1.4);
+  width:470px;
+  height:320px;
+  border-radius:8px;
+  padding:5px;
+}
+
+img{
+  filter: brightness(0.8) ;
+  border-radius:8px;
+  padding:5px;
+}
+
+.sidewize{
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 470px 1fr;
+  gap: 1rem;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font: 500 100%/1.5 system-ui;
+}
+
+.highlights{
+  color:red;
+  font-size:1em;
+}
+
+.card-body{
+  background-color:#cccccc;
+  box-shadow: 10px 10px 10px #808080;
+}
+
+.card-title{
+  color:#2b2b2b;
+}
+
+.card-text{
+  color:#2b2b2b;
+  text-align:center;
+}
+
+.central{
+  vertical-align: middle;
+}
+
+ul.a{
+  list-style-type:none;
+}
+
+.list-group-item{
+  color:red;
+  font-weight:bold;
+}
+
+.card-text-small{
+  text-size:0.5em !important;
+  text-weight:normal !important;
+}

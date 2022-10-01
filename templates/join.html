@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Join
+{% endblock %}
+
+{% block main %}
+
+        {%for i in to_show%}
+            <div class="row">
+                <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">A journey to <div class="highlights">{{i[0]['location']}}</div> for {{i[0]['days']}} days starting on <div class="highlights">{{i[0]['start_date']}}</div> with estimated cost of {{i[0]['est_cost']}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{i[0]['joined']}} people joined with the minimum requirement being {{i[0]['min_people']}}</h6>
+                    <p class="card-text">Description: {{i[0]['description']}}</p>
+                    <form action="/join" method="post">
+                        <input type="hidden" name="trip_id" id="trip_id " value="{{i[0]['id']}}">
+                        <button class="btn btn-primary" type="submit">Join Journey</button>
+                    </form>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">A journey to <div class="highlights">{{i[1]['location']}}</div> for {{i[1]['days']}} days starting on <div class="highlights">{{i[1]['start_date']}}</div> with estimated cost of {{i[1]['est_cost']}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{i[1]['joined']}} people joined with the minimum requirement being {{i[1]['min_people']}}</h6>
+                    <p class="card-text">Description: {{i[1]['description']}}</p>
+                    <form action="/join" method="post">
+                        <input type="hidden" name="trip_id" id="trip_id " value="{{i[1]['id']}}">
+                        <button class="btn btn-primary" type="submit">Join Journey</button>
+                    </form>
+                    </div>
+                </div>
+                </div>
+                <p></p>
+            </div>
+            {%endfor%}
+
+            {%if last%}
+            <p></p>
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">A journey to <div class="highlights">{{last['location']}}</div> for {{last['days']}} days starting on <div class="highlights">{{last['start_date']}}</div> with estimated cost of {{last['est_cost']}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{last['joined']}} people joined with the minimum requirement being {{last['min_people']}}</h6>
+                <p class="card-text">Description: {{last['description']}}</p>
+                <form action="/join" method="post">
+                <input type="hidden" name="trip_id" id="trip_id " value="{{last['id']}}">
+                <button class="btn btn-primary" type="submit">Join Journey</button>
+                </form>
+                </div>
+            </div>
+            {%endif%}
+
+    </form>
+    {%if not exist%}
+        <h3>Sorry no upcoming journeys available at the moment.</h3>
+    {%endif%}
+{% endblock %}
