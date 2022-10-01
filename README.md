@@ -97,7 +97,7 @@ Create a new journey<br/><hr width=600/>
 Join a journey<br/><hr width=600/>
   <img src="./images/join.jpg" width=600 ><br/><br/>
 Journeys joined and created<br/><hr width=600/>
-  <img src="./images/me.jpg" width=600 ><br/><br/>
+  <img src="./images/my.jpg" width=600 ><br/><br/>
 Past Jourenys<br/><hr width=600/>
   <img src="./images/past.jpg" width=600><br/>
 </div>
